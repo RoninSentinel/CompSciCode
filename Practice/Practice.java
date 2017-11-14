@@ -1,7 +1,7 @@
 
 public class Practice {
 
-	public Practice() {
+	public static void main (String args[]) {
 		// TODO Auto-generated constructor stub
 		for ( int i = 1; i <= 5; i++ )
 		{
