@@ -1,33 +1,36 @@
 package Practice2;
-
+import java.util.Scanner;
+import java.util.ArrayList;
 public class UltimateFrisbee {
 
 public class Person {
 	String firstname;
 	String lastname;
-	public Person(String firstname, String lastname){
-	this.firstname = firstname;
+	public String Person(String firstname, String lastname){
 }
-	String toString()
-		return (lastname, firstname);
+	public String toString() {
+		return (Person(lastname, firstname));
 	}
 
 public class Ultimateplayer extends Person {
 	static int jerseynumber;
 	String position;
-	UltimatePlayer(String firstName, String lastName, String position){
-		super.Person();
-	}
-	if(postion != "cutter") {
+	public void UltimatePlayer(String firstName, String lastName, String position){
+		super.Person(lastname, firstname);
+	if(position != "cutter") {
 		System.out.println("handler");
 	}
+	else
+		System.out.println("cutter");
+	
 	for(int i = 0; i<ArrayList<UltimatePlayer> players.size();i++) {
 		i = jerseynumber;
+	}
 	}
 	String getPosition() {
 		return position;
 	}
-	String toString() {
+	public String toString() {
 		return (Person(String lastname, String firstname) +"\n   Jersey #" + jerseynumber + "/n   Position: "+ position);
 	}
 	
@@ -35,7 +38,7 @@ public class Ultimateplayer extends Person {
 
 public class Captain extends Ultimateplayer {
 	boolean type; {
-		if (type == "offense")
+		if (type == true)
 			return true;
 		return false;
 	}
