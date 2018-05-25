@@ -21,7 +21,7 @@ public class Person {
 			this.lastname = lastname;
 		}
 		public String toString() {
-			String output = lastname + firstname;
+			String output = lastname + ", " + firstname;
 			return output;
 		}
 }

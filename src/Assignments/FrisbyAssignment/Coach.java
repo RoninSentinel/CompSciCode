@@ -3,11 +3,11 @@ package FrisbyAssignment;
 public class Coach extends Person {
 	String role;
 	
-	public Coach() {
-		super.Captain(String firstName, String lastName, String position, boolean type)
-		
+	public Coach(String first, String last, String r) {
+		super(first,last);
+		role = r;
 	}
-	String toString {
-		return(Player() + "\n   Role: " + role);
+	public String toString() {
+		return(super.toString() + "\n   Role: " + role);
 	}
 }

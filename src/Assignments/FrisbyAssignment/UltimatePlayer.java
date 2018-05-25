@@ -1,22 +1,21 @@
 package FrisbyAssignment;
+import java.util.ArrayList;
 
 public class UltimatePlayer extends Person {
-	private static int jerseynumber;
-	private static String position;
-	
-	public UltimatePlayer(String firstName, String lastName, String position){
+	private static int c = 1;
+	private String position;
+	private int jerseynumber;
+	public UltimatePlayer(String firstName, String lastName, String pos){
 		super(firstName,lastName);
-		setPosition(position);
-		if(position != "cutter") {
-			System.out.println("handler");
+		if(pos.equals("handler") || pos.equals("cutter")) {
+			position = pos;
 		}
 		else {
-			System.out.println("cutter");
+			position = "handler";
 		}
-		for(int i = 0; i < ArrayList<UltimatePlayer>.size();i++) {
-			i = jerseynumber;
-		}
-	}//end constructor
+		jerseynumber = c;
+		c++;
+	}
 	
 	public String getPosition() {
 		return position;
@@ -25,7 +24,7 @@ public class UltimatePlayer extends Person {
 		this.position = position;
 	}
 	public String toString() {
-		return (Person(String lastname, String firstname) +"\n   Jersey #" + jerseynumber + "/n   Position: "+ position);
+		return super.toString()+"\n   Jersey #: " + jerseynumber + "\n   Position: "+ position;
 	}
 	
 }

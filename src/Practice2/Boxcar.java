@@ -1,5 +1,4 @@
 package Practice2;
-
 public class Boxcar {
     // Variables that will be initialized in the Boxcar constructors.
     private String cargo;
@@ -25,13 +24,12 @@ public class Boxcar {
     // no matter what value is stored in the u parameter.
     public Boxcar(String c, int u, boolean r)
     {
-        if (c.equals("gizmos") || c.equals("gadgets") || c.equals("widgets") || c.equals("wadgets") ) {
-        	cargo = "gizmos";
-        	}
+        setCargo(c);
+        
         if(u<0 || u>10) {
         	numUnits = 0;
         }
-        boolean repair = r;
+        repair = r;
         if (r == true) {
         	numUnits = 0;
         }
@@ -46,9 +44,12 @@ public class Boxcar {
     // and a tab between the value for cargo and "in repair"/"in service"
     public String toString()
     {
-        if(repair == true) 
-        	   return numUnits+ " " + cargo + "/tin repair/n";
-        	return numUnits + " " + cargo + "/tin service/n";
+        if(repair == true){
+        	   return numUnits+ " " + cargo + "\tin repair\n";
+        }
+        else{
+        	return numUnits + " " + cargo + "\tin service\n";
+    }
     }
 
     // This method adds 1 to the number of units in the BoxCar. The maximum
@@ -57,7 +58,7 @@ public class Boxcar {
     // If the repair variable is true, then numUnits may only be set to 0.
     public void loadCargo() {
     numUnits++;
-    if(numUnits > 10) {
+    if(numUnits >= 10) {
     	numUnits = 10;
     }
     if(repair == true) {
