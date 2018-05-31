@@ -1,5 +1,4 @@
-package PixelProj;
-
+package PixelProj.classes;
 public class IntArrayWorker
 {
   /** two dimensional matrix */

@@ -1,5 +1,4 @@
-package PixelProj;
-
+package PixelProj.classes;
 import java.awt.Color;
 
 /**

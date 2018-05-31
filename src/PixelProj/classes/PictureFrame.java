@@ -1,5 +1,4 @@
-package PixelProj;
-
+package PixelProj.classes;
 import javax.swing.*;
 import java.awt.*;
 
