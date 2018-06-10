@@ -50,7 +50,21 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
-  
+  public void mirrorVertical() {
+	  Pixel[][] pixels = this.getPixels2D();
+	  Pixel leftPixel = null;
+	  Pixel rightPixel = null;
+	  int width = pixels[0].length;
+	  for (int row = 0; row < pixels.length; row++)
+	  {
+	  for (int col = 0; col < width / 2; col++)
+	  {
+	  leftPixel = pixels[row][col];
+	  rightPixel = pixels[row][width – 1 - col];
+	  rightPixel.setColor(leftPixel.getColor());
+	  }
+	  }
+  } 
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
